@@ -1,7 +1,14 @@
 aid: aeroshield
 name: AeroShield
-description: 'AeroShield is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'AeroShield (AeroShield Materials, Inc.) is a Waltham, Massachusetts materials science
+  company spun out of MIT in 2019 that has developed and scaled the world''s most transparent silica
+  aerogel. Its ultra-clear aerogel sheets are laminated into insulated glass units so that a standard
+  double-pane window or door can outperform a triple pane while remaining thinner and lighter, boosting
+  thermal efficiency by up to 65%. The company sells business-to-business to window, door and skylight
+  manufacturers rather than to consumers, operates a pilot manufacturing facility in Waltham, and was
+  selected for a $14.5M ARPA-E award. It publishes no developer program, no public API, and no
+  machine-readable API artifacts; this profile records that absence.'
+image: https://cdn.sanity.io/images/387hr0u0/production/568fb5d28e6defec372abd46c082186ccad410a3-186x42.svg
 url: https://raw.githubusercontent.com/api-evangelist/aeroshield/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,13 @@ created: '2026-09-10'
 modified: '2026-09-10'
 tags:
 - Company
+- Materials Science
+- Aerogel
+- Building Materials
+- Energy Efficiency
+- Windows
+- Manufacturing
+- Climate Tech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +33,40 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aeroshield-domain-security.yml
+- type: LLMsTxt
+  url: llms/aeroshield-llms.txt
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://aeroshield.tech/
+- type: About
+  url: https://aeroshield.tech/about-us
+- type: FAQ
+  url: https://aeroshield.tech/faq
+- type: Contact
+  url: https://aeroshield.tech/contact
+- type: Newsroom
+  url: https://aeroshield.tech/press
+- type: LinkedIn
+  url: https://www.linkedin.com/company/aeroshield-inc/
+x-enrichment:
+  date: '2026-09-10'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: AeroShield manufactures transparent silica aerogel sheets for insulated window glass and
+    sells B2B to window and door makers; its entire web presence is a seven-page static Astro
+    marketing site with no developer, docs, app or api subdomain resolving on aeroshield.tech.
+  evidence:
+  - url: https://aeroshield.tech/openapi.json
+    status: 404
+  - url: https://aeroshield.tech/.well-known/api-catalog
+    status: 404
+  - url: https://aeroshield.tech/llms.txt
+    status: 404
+  - url: https://api.github.com/orgs/aeroshield
+    status: 404
+  checked: '2026-09-10'

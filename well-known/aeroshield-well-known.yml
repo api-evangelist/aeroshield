@@ -1,0 +1,98 @@
+generated: '2026-09-10'
+method: probed
+source: live HTTPS probes of every host this record knows (aeroshield.tech, www.aeroshield.tech)
+note: >-
+  AeroShield publishes a small static Astro marketing site and no developer surface. Every named
+  discovery path returns a real 404 page (not a catch-all), so no WellKnown or SecurityTxt pointer is
+  emitted — this file records a verified absence, not a presence. No api/developer/docs/portal/status
+  subdomain resolves on aeroshield.tech (all NXDOMAIN), so there are no additional hosts to probe.
+hit_count: 0
+path_echo_control: passed
+soft_404_control:
+  path: /.well-known/aeroshield-negative-control-7f3ab91c.json
+  status: 404
+  note: a path that cannot exist returns 404, so a 200 on any probed path would have been meaningful
+hosts:
+- host: https://aeroshield.tech
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://www.aeroshield.tech
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery run 2026-09-10 against the only host this company operates. Every REST
+    OpenAPI candidate path (/openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs,
+    /docs, /redoc), /graphql, /api and /llms.txt returned 404. No MCP endpoint, no OGC surface (the
+    company publishes no geospatial or mapping product), no SOAP/WSDL, no published .proto, and no
+    first-party package on npm, PyPI or a GitHub organization. No A2A agent card at either the
+    canonical or legacy well-known path.
+  probes:
+  - {url: 'https://aeroshield.tech/openapi.json', status: 404}
+  - {url: 'https://aeroshield.tech/openapi.yaml', status: 404}
+  - {url: 'https://aeroshield.tech/swagger.json', status: 404}
+  - {url: 'https://aeroshield.tech/v1/openapi.json', status: 404}
+  - {url: 'https://aeroshield.tech/api-docs', status: 404}
+  - {url: 'https://aeroshield.tech/docs', status: 404}
+  - {url: 'https://aeroshield.tech/redoc', status: 404}
+  - {url: 'https://aeroshield.tech/graphql', status: 404}
+  - {url: 'https://aeroshield.tech/api', status: 404}
+  - {url: 'https://aeroshield.tech/llms.txt', status: 404}
+  - {url: 'https://api.github.com/orgs/aeroshield', status: 404}
+  - {url: 'https://pypi.org/pypi/aeroshield/json', status: 404}
+  subdomains_checked: [api, developer, developers, docs, app, portal, status, mcp]
+  subdomains_resolving: []
